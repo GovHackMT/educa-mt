@@ -38,7 +38,7 @@ function ($scope, $stateParams) {
 
 }])
 
-.controller('escolasCtrl', ['$scope', '$stateParams', 
+.controller('escolasCtrl', ['$scope', '$stateParams',
 // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
@@ -59,5 +59,25 @@ function ($scope, $stateParams) {
 function ($scope, $state, $stateParams) {
 
   console.log($stateParams);
+
+  var vm  = $scope;
+
+  vm.alunos = [
+    {id: 1, nome: "João", faltou: 0},
+    {id: 2, nome: "Maria", faltou: 0},
+    {id: 3, nome: "Jose", faltou: 0},
+    {id: 4, nome: "Armando", faltou: 0},
+    {id: 5, nome: "Fabio", faltou: 0},
+    {id: 6, nome: "Andre", faltou: 0},
+    {id: 7, nome: "Leanro", faltou: 0}];
+
+  vm.cadastrarFalta = function(aluno) {
+    aluno.faltou = 1
+    console.log(aluno);
+  };
+
+  vm.enviarDiario = function() {
+    console.log(vm.alunos);
+  };
 
 }])
