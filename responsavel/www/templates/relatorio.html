@@ -1,0 +1,9 @@
+<ion-view title="EducaMT - Responsáveis" id="page6">  
+  <ion-content padding="true" class="has-header">
+    <h4 id="educaMTResponsVeis-heading1" style="color:#000000;">{{aluno}}</h4>
+    <ion-list id="educaMTResponsVeis-list4">
+      <ion-item class="item-icon-right" ng-repeat="item in items">{{item.data}}
+        <i class="icon" ng-class="{'ion-checkmark-round' :item.status == 1, 'ion-alert' :item.status == 2, 'ion-close' :item.status == 3}"></i>      
+    </ion-list>
+  </ion-content>
+</ion-view>
