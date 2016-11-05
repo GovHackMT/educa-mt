@@ -13,10 +13,10 @@ function ($scope, $stateParams) {
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
     var vm = $scope;
-    vm.items =[{data:"01/11/2016", status:1},
-                {data:"02/11/2016", status:2},
-                {data:"03/11/2016", status:3},
-                {data:"04/11/2016", status:1}];
+    vm.items =[{data:"01/11/2016", status:1, observacao: "Presente por período integral"},
+                {data:"02/11/2016", status:2, observacao: "Aluno não compareceu na escola"},
+                {data:"03/11/2016", status:3, observacao: "Aluno não estava presente na última aula"},
+                {data:"04/11/2016", status:1, observacao: "Presente por período integral"}];
     vm.aluno = "Aluno Teste";
 
 }])

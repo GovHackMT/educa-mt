@@ -1,7 +1,7 @@
 {
-  "name": "educamt---professor",
+  "name": "educamt---responsavel",
   "version": "1.1.1",
-  "description": "EducaMT - Professor: An Ionic project",
+  "description": "EducaMT - Responsável: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
@@ -22,6 +22,6 @@
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [
-    "ios"
+    "ios", "android"
   ]
 }
