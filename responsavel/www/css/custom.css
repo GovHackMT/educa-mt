@@ -1,0 +1,17 @@
+.icon-relatorio{
+    right: 10px;
+    position: absolute;    
+    font-size: x-large;     
+}
+
+.verde {
+    color: green;
+}
+
+.vermelho {
+    color: red;
+}
+
+.laranja {
+    color: orange;
+}
