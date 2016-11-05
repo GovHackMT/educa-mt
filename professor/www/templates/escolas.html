@@ -1,12 +1,14 @@
 <ion-view title="Escolas" id="page6" ng-controller="escolasCtrl">
 
   <ion-content padding="true" class="has-header">
-    <ion-list id="escolas-list2">
 
-      <ion-item ng-repeat="escola in escolas" ui-sref="disciplinas({escola: escola.id})">
-        <h2>{{escola.nome}}</h2>
-      </ion-item>
+      <div class="demo-card bordered-escola" ng-repeat="escola in escolas" ui-sref="disciplinas({escola: escola.id})">
+        <div class="card">
+          <div class="item">
+            <h2>{{escola.nome}}</h2>
+          </div>
+        </div>
+      </div>
 
-    </ion-list>
   </ion-content>
 </ion-view>

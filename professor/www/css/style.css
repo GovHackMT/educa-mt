@@ -13,6 +13,11 @@ h2 {
   background: transparent;
 }
 
+.bordered-escola div {
+  border-top: 10px solid blue;
+  background: transparent;
+}
+
 
 h4.title {
   text-align: center;
