@@ -14,7 +14,7 @@ a maior parte da população do estado, em todos os seus cantos e níveis sociai
 
 
 ### Tecnologias Utilizadas
-Para o sistema desenvolvido usamos Ionic Framework para a producao de um App, que recebe as informacoes da API, EducaMT-WebAPI, essa API foi desenvolvida utililizando ASP .NET WebAPI-2, as informações estão armazenadas em um banco de dados PostgreSQL 9.5, hospedado nos servidores da Amazon e a API está hospedada nos servidores Microsoft Azure.
+Para o sistema desenvolvido usamos Ionic Framework para a producao de um App, que recebe as informacoes da API, EducaMT-WebAPI, essa API foi desenvolvida utililizando ASP .NET WebAPI-2, as informações estão armazenadas em um banco de dados PostgreSQL 9.5, hospedado nos servidores da Amazon e a API está hospedada nos servidores Microsoft Azure. Para a comunicação com os responsáveis utilizamos as APIs do Telegram e do LocaSMS, configurando conforme a escolha do usuário.
 
 ### Licença
 The MIT License (MIT) Copyright (c) 2016 GovHack MT
