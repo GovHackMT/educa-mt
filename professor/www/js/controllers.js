@@ -61,7 +61,8 @@ function ($scope, $stateParams) {
 
   vm.escolas = [{nome: 'Ubaldo Monteiro', id: 1},
                 {nome: 'Adalgisa de Barros', id: 2},
-                {nome: 'Milton Figueiredo', id: 3}];
+                {nome: 'Milton Figueiredo', id: 4},
+                {nome: 'Presidente Médice', id: 5},];
 
 }])
 
@@ -118,6 +119,8 @@ function ($scope, $state, $stateParams, $http) {
           "<hr />headers: " + header +
           "<hr />config: " + config;
       });
+
+    $state.go('disciplinas', {escola: vm.idProfessor});
   };
 
 }])

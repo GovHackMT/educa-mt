@@ -14,6 +14,36 @@ h2 {
   background: transparent;
 }
 
+.bordered-Português div {
+  border-top: 10px solid red;
+  background: transparent;
+}
+
+.bordered-Inglês div {
+  border-top: 10px solid dodgerblue;
+  background: transparent;
+}
+
+.bordered-Literatura div {
+  border-top: 10px solid deeppink;
+  background: transparent;
+}
+
+.bordered-Matematica div {
+  border-top: 10px solid black;
+  background: transparent;
+}
+
+.bordered-Historia div {
+  border-top: 10px solid gray;
+  background: transparent;
+}
+
+.bordered-Geografia div {
+  border-top: 10px solid green;
+  background: transparent;
+}
+
 .bordered-escola div {
   border-top: 10px solid blue;
   background: transparent;

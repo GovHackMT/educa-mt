@@ -2,7 +2,7 @@
 
   <ion-content padding="true" class="has-header">
 
-      <div class="demo-card bordered" ng-repeat="disciplina in disciplinas" ui-sref="alunos({disciplina: disciplina.id, professor: idProfessor})">
+      <div class="demo-card bordered-{{disciplina.nome}}" ng-repeat="disciplina in disciplinas" ui-sref="alunos({disciplina: disciplina.id, professor: idProfessor})">
         <div class="card">
           <div class="item">
             <h2>{{disciplina.nome}}</h2>
