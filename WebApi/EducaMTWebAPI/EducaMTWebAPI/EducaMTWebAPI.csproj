@@ -137,6 +137,8 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Models\EnviarTelegramDto.cs" />
+    <Compile Include="Models\envioSmsDto.cs" />
     <Compile Include="Controllers\ProfessorController.cs" />
     <Compile Include="Controllers\ResponsavelController.cs" />
     <Compile Include="DAL.cs" />

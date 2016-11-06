@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
@@ -66,13 +67,13 @@ namespace EducaMTWebAPI.Controllers
 
         [Route("enviar-telegram")]
         [HttpPost]
-        public async Task Enviartelegram(string code, string hash)
+        public async Task Enviartelegram(EnviarTelegramDto dto)
         {
             var apiId = 92426;
             var apiHash = "77135e73f47f49813618b53e8c51ee89";
             var client = new TelegramClient(apiId, apiHash);
             await client.ConnectAsync();
-            var user = await client.MakeAuthAsync("+5565992291443", hash, code);
+            var user = await client.MakeAuthAsync("+5565992291443", dto.Hash, dto.Code);
             var result = await client.GetContactsAsync();
 
             //find recipient in contacts
@@ -82,29 +83,23 @@ namespace EducaMTWebAPI.Controllers
                 .FirstOrDefault(x => x.phone == "5565981250768");
 
             //send message
-            await client.SendMessageAsync(new TLInputPeerUser() { user_id = userR.id }, "Seu filho não veio na escola dia 06/11/2016");
+            await client.SendMessageAsync(new TLInputPeerUser() { user_id = userR.id }, dto.Mensagem);
         }
 
         [Route("enviar-sms")]
         [HttpPost]
-        public async Task<string> EnviarSMS(string numero, string mensagem, string login, string senha)
+        public async Task<string> EnviarSMS(envioSmsDto dto)
         {
-            mensagem = HttpUtility.UrlEncode(mensagem);
-            string page = $"http://54.173.24.177/painel/api.ashx?action=sendsms&lgn={login}&pwd={senha}&msg={mensagem}&numbers={numero}";
+            dto.Mensagem = HttpUtility.UrlEncode(dto.Mensagem);
+            var senha = "148754";
+            var login = "65981250768";
+
+            string page = $"http://54.173.24.177/painel/api.ashx?action=sendsms&lgn={login}&pwd={senha}&msg={dto.Mensagem}&numbers={dto.Numero}";
             using (HttpClient client = new HttpClient())
             using (HttpResponseMessage response = await client.GetAsync(page))
             using (HttpContent content = response.Content)
-            {
-                // ... Read the string.
-                string result = await content.ReadAsStringAsync();
-
-                // ... Display the result.
-                if (result != null &&
-                result.Length >= 50)
-                {
-                    return result.Substring(0, 50) + "...";
-                }
-                return string.Empty;
+            {                
+                return await content.ReadAsStringAsync();                
             }
         }        
     }
