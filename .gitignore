@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/WebApi/EducaMTWebAPI/EducaMTWebAPI/bin
+/WebApi/EducaMTWebAPI/packages
+/WebApi/EducaMTWebAPI/EducaMTWebAPI/obj/Debug

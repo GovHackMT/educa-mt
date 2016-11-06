@@ -21,15 +21,28 @@ function ($scope, $stateParams) {
 
 }])
    
-.controller('filhosCtrl', ['$scope', '$stateParams', '$state', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('filhosCtrl', ['$scope', '$stateParams', '$state', '$http', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $state) {
-    var vm = $scope;
-    vm.filhos =[{nome:"João", id:1},
-                {nome:"Maria", id:2},
-                {nome:"José", id:3},
-                {nome:"Madelena", id:4}];           
+function ($scope, $stateParams, $state, $http) {
+     var vm = $scope;
+    // vm.filhos =[{nome:"João", id:1},
+    //             {nome:"Maria", id:2},
+    //             {nome:"José", id:3},
+    //             {nome:"Madelena", id:4}];
+    $http.get("http://educamt.azurewebsites.net/responsavel/1/filhos")     
+    .success(function(data, status, headers,config){
+      console.log('data success');
+      console.log(data); // for browser console
+      $scope.filhos = data; // for UI
+    })
+    .error(function(data, status, headers,config){
+      console.log('data error');
+    })
+    .then(function(result){
+      console.log('aqui');
+      things = result.filhos      
+    });      
 }])
    
 .controller('loginCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
