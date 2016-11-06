@@ -1,18 +1,20 @@
 <ion-view title="EducaMT" id="login">
   <ion-content padding="true" class="has-header">
-    <form id="login-form1" class="list">
+    <form id="login-form1" class="list" ng-submit="logar(dados)">
       <ion-list id="login-list6">
+        <div class="vermelho" ng-if="erroEmail">Email inválido</div>
         <label class="item item-input" id="login-input1">
-          <span class="input-label">Username</span>
-          <input type="text" placeholder="">
+          <span class="input-label">Email</span>
+          <input type="text" placeholder="" ng-model="dados.email">
         </label>
+        <div class="vermelho" ng-if="erroSenha">Senha inválida</div>
         <label class="item item-input" id="login-input2">
-          <span class="input-label">Password</span>
-          <input type="password" placeholder="">
+          <span class="input-label">Senha</span>
+          <input type="password" placeholder="" ng-model="dados.senha">
         </label>
       </ion-list>
       <div class="spacer" style="height: 40px;"></div>      
-      <a class="button button-positive  button-block" ui-sref="filhos({responsavelId:1})">Log in</a>
+      <button type="submit" class="button button-positive  button-block">Log in</button>
     </form>
   </ion-content>
 </ion-view>

@@ -53,11 +53,26 @@ function ($scope, $stateParams, $state, $http) {
     });      
 }])
    
-.controller('loginCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('loginCtrl', ['$scope', '$stateParams', '$state', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
- 
+function ($scope, $stateParams, $state) {
+  $scope.erroEmail = false;
+  $scope.erroSenha = false;
+  $scope.dados = {email:"", senha:""};
   
+  $scope.logar = function(dados) {    
+    $scope.erroEmail = false;
+    $scope.erroSenha = false;
+    if (dados.email != "joao@gmail.com")
+      $scope.erroEmail = true;
+    if (dados.senha != "123" )
+      $scope.erroSenha = true;          
+    if(!$scope.erroEmail && !$scope.erroSenha)
+    {
+      $state.go('filhos',{responsavelId:1});
+    }    
+    $scope.dados = {email:"", senha:""};
+  };  
 }])
  
