@@ -3,14 +3,11 @@ Nosso serviço visa entregrar a população, o acompanhento da presença de seus
 
 ## Aproximação da sociedade com a escola
 
-Na Lei de Diretrizes e Bases da Educação Nacional e no Estatuto da Criança e do Adolescente: 
+Está na Lei de Diretrizes e Bases da Educação Nacional e no Estatuto da Criança e do Adolescente: 
 "As escolas têm a obrigação de se articular com as famílias, e os pais têm direito a ter ciência do processo pedagógico".
-Além de direitos e deveres, a escola sabe da importância que esta aproximação tem e os benefícios que ela traz.
+Além de direitos e deveres, a escola sabe da importância que esta aproximação tem, e os beneficios que ela traz, tendo em vista que foi um dos problemas apresentados pela Secretaria de Estado de Educação.
 
-Tem-se buscado diversas formas realizar esta aproximação, algumas com bastante êxito.
-Os principais motivos apontados pelos pais, para um não envolvimento maior com a escola, é o tempo e a dificuldade de deslocamento.
-Por isso utilizaremos os recursos que a tecnologia traz, abrindo mais um canal de comunicação com os pais, através de aplicativo, email ou sms. Atingindo assim,
-a maior parte da população do estado, em todos os seus cantos e níveis sociais.
+Tem-se buscado de diversas formas de realizar esta aproximação, no entanto as principais dificuldades apontados pelos pais, para um não envolvimento maior com a escola, é o tempo e a dificuldade de deslocamento. Então vamos utilizar os recursos que a tecnologia traz, abrindo mais um canal de comunicação, aplicativo, email e sms. Atingindo assim, a maior parte da população do estado, em todos os seus cantos e níveis sociais.
 
 
 ### Tecnologias Utilizadas
