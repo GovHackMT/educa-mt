@@ -90,23 +90,39 @@ function ($scope, $state, $stateParams, $http) {
   });
 
   vm.cadastrarFalta = function(aluno) {
-    aluno.faltou = true
-    console.log(aluno);
+
+    aluno.faltou = true;
+
+    var url = "http://educamt.azurewebsites.net/professor/enviar-sms";
+    var param = {
+      numero: "65981250768",
+      mensagem: "Seu filho, " + aluno.nome + ", não está presente na aula de, Física, do Professor Xavier"
+    };
+
+    /*var config = {
+      headers : {
+        'Content-Type': 'application/json;'
+      }
+    }*/
+    var config = "";
+    $http.post(url, param, config)
+      .success(function(data, status, headers, config){
+        console.log(data + " " + status);
+        console.log("Faltou aluno")
+      })
+      .error(function(data, status, headers,config){
+        console.log('data error');
+      })
+      .then(function(result){
+        things = result;
+      });
+
   };
 
   vm.enviarDiario = function() {
-    console.log(vm.alunos);
 
     var data = vm.alunos;
-
-    var config = {
-      headers : {
-        'Content-Type': 'application/json;charset=utf-8;'
-      }
-    }
-
     var config = "";
-
     $http.post(
         "http://educamt.azurewebsites.net/professor/" + vm.idProfessor + "/disciplina/" + vm.idDisciplina + "/diario",
         data, config)
