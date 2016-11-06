@@ -17,13 +17,13 @@ angular.module('app.routes', [])
   })
 
   .state('relatorio', {
-    url: '/relatorio?filho',
+    url: '/relatorio?filho&?responsavelId',
     templateUrl: 'templates/relatorio.html',
     controller: 'relatorioCtrl'
   })
 
   .state('filhos', {
-    url: '/filhos',
+    url: '/filhos?responsavelId',
     templateUrl: 'templates/filhos.html',
     controller: 'filhosCtrl'
   })

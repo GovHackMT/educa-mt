@@ -24,7 +24,7 @@ namespace EducaMTWebAPI.Controllers
             return acesso.GetFilhosPorResponsavel(id);
         }
 
-        [Route("{id}/filho/{alunoId}relatorio")]
+        [Route("{id}/filho/{alunoId}/relatorio")]
         [HttpGet]
         public IEnumerable<RelatorioPresenca> GetRelatorioPresenca(int id, int alunoId)
         {

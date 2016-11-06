@@ -1,6 +1,6 @@
-<ion-view title="EducaMT - Filhos" id="filhos">
+<ion-view title="EducaMT" id="filhos">
   <ion-content padding="true" class="has-header">
-    <div class="list card" ng-repeat="filho in filhos" ui-sref="relatorio({filho: filho.id})">
+    <div class="list card" ng-repeat="filho in filhos" ui-sref="relatorio({filho: filho.id, responsavelId: responsavelId})">
       <div class="item item-avatar">
         <img src="https://cdn3.iconfinder.com/data/icons/rcons-simple-user/30/user_profile_avatar_account_person-128.png">
         <h2>{{filho.nome}}</h2>    
