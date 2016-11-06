@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace EducaMTWebAPI
 {
@@ -10,7 +11,9 @@ namespace EducaMTWebAPI
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            config.EnableCors();
+            var corsAttr = new EnableCorsAttribute("http://educamt.azurewebsites.net", "*", "*");
+            config.EnableCors(corsAttr);
+            
             // Web API routes
             config.MapHttpAttributeRoutes();
 
