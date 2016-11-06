@@ -4,6 +4,10 @@ angular.module('app.services', [])
 
 }])
 
+.service('', [function () {
+  
+}])
+
 .service('BlankService', [function(){
 
 }]);

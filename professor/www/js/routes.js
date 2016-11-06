@@ -33,7 +33,7 @@ angular.module('app.routes', [])
   })
 
   .state('alunos', {
-    url: '/page7?disciplina',
+    url: '/page7?disciplina&professor',
     templateUrl: 'templates/alunos.html',
     controller: 'alunosCtrl'
   })
